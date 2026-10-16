@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root{font-family:'DM Sans',sans-serif;color:#20372a;background:#f7f7f1;font-synthesis:none;text-rendering:optimizeLegibility}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.app-shell{min-height:100vh;display:flex;flex-direction:column}
+.navbar{height:78px;padding:0 clamp(20px,6vw,88px);display:flex;align-items:center;justify-content:space-between;background:#fffdf8;border-bottom:1px solid #e9e9df;position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:21px;letter-spacing:-.5px;color:#244632}
+.brand b{font-weight:700}
+.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#e5efdc;color:#2f6845;font-size:23px}
+.navbar nav{display:flex;align-items:center;gap:clamp(18px,3vw,38px);font-size:14px;font-weight:600;color:#5c6a5d}
+.navbar nav a:hover{color:#2d7048}
+.cart-link{display:flex;align-items:center;gap:8px}
+.cart-count{display:inline-grid;place-items:center;min-width:23px;height:23px;padding:0 6px;background:#244632;color:white;border-radius:99px;font-size:12px}
+.landing{position:relative;min-height:calc(100vh - 0px);display:flex;align-items:center;overflow:hidden;background-image:linear-gradient(90deg,rgba(11,34,23,.82) 0%,rgba(11,34,23,.61) 42%,rgba(11,34,23,.05) 100%),url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=2000&q=90');background-size:cover;background-position:center}
+.landing-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,30,20,.26),transparent 45%);pointer-events:none}
+.landing-content{position:relative;z-index:1;color:#fff;max-width:650px;padding:90px clamp(24px,10vw,150px)}
+.eyebrow{font-size:11px;letter-spacing:3px;font-weight:700;color:#d1e4b6;margin:0 0 24px}
+.landing h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(48px,6.6vw,88px);line-height:1.04;letter-spacing:-2.2px;margin:0 0 25px}
+.landing h1 em{color:#d3e6b9;font-weight:500}
+.landing-copy{font-size:16px;line-height:1.8;max-width:435px;color:#f0f3e9;margin:0 0 34px}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:22px;border:0;border-radius:5px;padding:15px 23px;font-size:14px;font-weight:700;transition:transform .2s,background .2s}
+.button:hover{transform:translateY(-2px)}
+.button-light{background:#e6f0d5;color:#21452e}
+.button-primary{background:#244632;color:#fff}
+.button-primary:hover{background:#326b46}
+.button:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.landing-note{margin-top:60px;color:#e2e9da;font-size:12px;letter-spacing:.5px}
+.landing-note span{color:#d3e6b9;margin-right:9px}
+.landing-caption{position:absolute;right:clamp(24px,5vw,70px);bottom:35px;color:#fff;font-size:10px;letter-spacing:2.5px}
+.page-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto;flex:1}
+.page-heading{padding:48px 0 28px;display:flex;justify-content:space-between;align-items:end;gap:20px}
+.page-heading h1,.about-hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,50px);line-height:1.1;letter-spacing:-1px;margin:8px 0 10px;color:#203e2c}
+.page-heading p{color:#738074;margin:0;line-height:1.6}
+.section-kicker{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#6c8b59}
+.category-section{padding:18px 0 38px}
+.category-title{display:flex;align-items:center;gap:12px;font-family:'Playfair Display',serif;font-size:27px;color:#294a34;margin:0 0 19px}
+.category-title:after{content:'';height:1px;background:#dfe5d9;flex:1}
+.plant-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.plant-card{background:#fff;border:1px solid #e9ece4;border-radius:10px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.plant-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #1e3e2410}
+.plant-image{width:100%;height:220px;object-fit:cover;display:block;background:#e9eee3}
+.plant-info{padding:17px 18px 19px}
+.plant-info h3{font-family:'Playfair Display',serif;font-size:21px;margin:0 0 7px;color:#2a4633}
+.plant-info p{font-size:13px;line-height:1.55;color:#788278;min-height:40px;margin:0 0 18px}
+.plant-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font-weight:700;color:#244632;font-size:17px}
+.add-button{border:1px solid #2f6541;border-radius:5px;background:#fff;color:#2f6541;padding:10px 12px;font-size:12px;font-weight:700;white-space:nowrap}
+.add-button:hover{background:#edf4e8}
+.add-button.added{background:#e8f0e3;border-color:#e8f0e3;color:#55734f}
+.cart-layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:32px;padding-bottom:50px}
+.cart-list{display:flex;flex-direction:column;gap:12px}
+.cart-row{display:grid;grid-template-columns:100px minmax(0,1fr) auto;gap:18px;align-items:center;background:#fff;border:1px solid #e8ebe3;border-radius:9px;padding:14px}
+.cart-row img{width:100px;height:100px;object-fit:cover;border-radius:6px;background:#e8eee3}
+.cart-product h3{font-family:'Playfair Display',serif;font-size:21px;margin:0 0 6px}
+.cart-product p{font-size:13px;color:#778276;margin:0}
+.quantity-controls{display:flex;align-items:center;gap:11px;margin-top:13px}
+.quantity-controls button{width:27px;height:27px;border:1px solid #d9e0d5;background:#f9faf6;border-radius:4px;color:#31553a}
+.quantity-controls span{font-size:13px;font-weight:700;min-width:12px;text-align:center}
+.cart-row-side{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:13px}
+.line-total{font-weight:700;color:#244632}
+.delete-button{border:0;background:transparent;color:#a65d52;font-size:12px;text-decoration:underline}
+.summary-card{background:#edf2e8;border-radius:10px;padding:24px;height:max-content;position:sticky;top:100px}
+.summary-card h2{font-family:'Playfair Display',serif;margin:0 0 22px;font-size:25px}
+.summary-line{display:flex;justify-content:space-between;gap:16px;color:#687768;font-size:14px;padding:12px 0;border-bottom:1px solid #d8e1d2}
+.summary-total{display:flex;justify-content:space-between;gap:16px;padding:20px 0 24px;font-weight:700;color:#203e2c;font-size:17px}
+.summary-card .button{width:100%;margin-bottom:10px}
+.text-button{display:block;text-align:center;color:#3b6946;font-size:13px;font-weight:700;padding:10px}
+.empty-state{text-align:center;background:#fff;border:1px dashed #d5dfd0;border-radius:10px;padding:55px 20px}
+.empty-icon{font-size:40px;color:#6f9361}
+.empty-state h2{font-family:'Playfair Display',serif;font-size:27px;margin:12px 0}
+.empty-state p{color:#778276;margin:0 0 23px}
+.about-hero{padding:70px 0 42px;max-width:720px}
+.about-hero p{font-size:16px;line-height:1.9;color:#697769}
+.about-values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:60px}
+.value-card{background:white;border:1px solid #e7ebe2;border-radius:9px;padding:25px}
+.value-card span{font-size:26px}
+.value-card h3{font-family:'Playfair Display',serif;font-size:21px;margin:14px 0 8px}
+.value-card p{font-size:13px;line-height:1.7;color:#748074;margin:0}
+.footer{text-align:center;padding:24px 15px;color:#859083;font-size:12px;border-top:1px solid #e7e9e1;background:#fffdf8}
+.footer span{padding:0 8px;color:#a3b69a}
+@media(max-width:800px){.plant-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cart-layout{grid-template-columns:1fr}.summary-card{position:static}.plant-image{height:190px}.landing{background-position:60% center}.landing-content{padding-top:70px;padding-bottom:70px}.about-values{grid-template-columns:1fr}}
+@media(max-width:520px){.navbar{height:68px;padding:0 16px}.brand{font-size:17px;gap:6px}.brand-mark{width:30px;height:30px}.navbar nav{gap:13px;font-size:12px}.page-wrap{width:calc(100% - 28px)}.page-heading{padding-top:34px;align-items:start;flex-direction:column}.plant-grid{grid-template-columns:1fr 1fr;gap:10px}.plant-image{height:145px}.plant-info{padding:12px}.plant-info h3{font-size:17px}.plant-info p{font-size:11px;min-height:52px}.plant-card-bottom{align-items:flex-start;flex-direction:column}.add-button{width:100%;padding:9px 5px}.cart-row{grid-template-columns:74px minmax(0,1fr);gap:12px;padding:10px}.cart-row img{width:74px;height:80px}.cart-row-side{grid-column:2;flex-direction:row;justify-content:space-between;align-items:center;text-align:left}.cart-product h3{font-size:18px}.landing h1{letter-spacing:-1px}.landing-copy{font-size:14px}.landing-caption{display:none}}

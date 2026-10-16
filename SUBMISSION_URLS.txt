@@ -1,0 +1,24 @@
+After uploading this project to your own GitHub repository, replace YOUR_USERNAME and YOUR_REPOSITORY below with the actual values.
+
+Task 1 - README.md:
+https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/README.md
+
+Task 2 - AboutUs.jsx:
+https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/src/components/AboutUs.jsx
+
+Task 3 - App.css:
+https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/src/App.css
+
+Task 4 - App.jsx:
+https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/src/App.jsx
+
+Task 5 - CartSlice.jsx:
+https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/src/redux/CartSlice.jsx
+
+Task 6 - ProductList.jsx:
+https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/src/components/ProductList.jsx
+
+Task 7 - CartItem.jsx:
+https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/blob/main/src/components/CartItem.jsx
+
+Important: These are URL templates, not live repository links. Upload and push the files to GitHub first, then use your real repository URLs in Coursera.
